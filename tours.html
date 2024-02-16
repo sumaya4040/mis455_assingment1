@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Agency</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="/tours.html">Tours</a>
+    <a href="/contact.html">Contact</a>
+    <a href="About us.html">About us</a>
+    <a href="Pricing.html">Pricing</a>
+  </nav>
+</header>
+
+<section id="tour-categories">
+  <h2>Tour Categories</h2>
+  <ul>
+    <li><a href="/tours/hiking">Hiking</a></li>
+    <li><a href="/tours/kayaking">Kayaking</a></li>
+    <li><a href="/tours/safari">Safari</a></li>
+    <li><a href="/tours/mountain-biking">Mountain Biking</a></li>
+  </ul>
+</section>
+
+<section id="list-of-tours">
+  <h2>List of Tours</h2>
+  <div class="grid">
+    <?php foreach ($tours as $tour): ?>
+      <article class="tour">
+        <img src="tour-1.jfif" alt="Tour 1: Hiking in the Himalayas">
+        <h3><?php echo $tour['name']; ?></h3>
+        <p><?php echo $tour['brief_description']; ?></p>
+        <a href="/tours/<?php echo $tour['category']; ?>/<?php echo $tour['id']; ?>" class="learn-more-btn">Learn More</a>
+      </article>
+    <?php endforeach; ?>
+  </div>
+  <br>
+  <div class="grid">
+    <?php foreach ($tours as $tour): ?>
+      <article class="tour">
+        <img src="tour-2.jfif" alt="Tour 2: Whitewater Rafting in the Amazon">
+        <h3><?php echo $tour['name']; ?></h3>
+        <p><?php echo $tour['brief_description']; ?></p>
+        <a href="/tours/<?php echo $tour['category']; ?>/<?php echo $tour['id']; ?>" class="learn-more-btn">Learn More</a>
+      </article>
+    <?php endforeach; ?>
+  </div>
+  <br>
+  <div class="grid">
+    <?php foreach ($tours as $tour): ?>
+      <article class="tour">
+        <img src="tour-3.jfif" alt="Tour 3: Camping in the African Savannah">
+        <h3><?php echo $tour['name']; ?></h3>
+        <p><?php echo $tour['brief_description']; ?></p>
+        <a href="/tours/<?php echo $tour['category']; ?>/<?php echo $tour['id']; ?>" class="learn-more-btn">Learn More</a>
+      </article>
+    <?php endforeach; ?>
+  </div>
+</section>
+
+<footer>
+  <p>Contact Information</p>
+  <p>Social Media Links</p>
+  <p>Copyright Information</p>
+</footer>
+
+</body>
+</html>
